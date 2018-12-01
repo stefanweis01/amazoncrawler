@@ -1,10 +1,13 @@
-package com.seis.amazoncrawler.dto;
+package com.sweis.amazoncrawler.dto;
 
 public class ElementText {
-
-    private final String text;
+    private String text;
 
     public ElementText(final String text) {
+        this.text = text;
+    }
+
+    public void setText(final String text) {
         this.text = text;
     }
 

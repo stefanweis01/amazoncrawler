@@ -1,4 +1,4 @@
-package com.seis.amazoncrawler;
+package com.sweis.amazoncrawler;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

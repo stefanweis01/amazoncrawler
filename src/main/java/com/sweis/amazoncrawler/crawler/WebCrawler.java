@@ -1,4 +1,4 @@
-package com.seis.amazoncrawler.crawler;
+package com.sweis.amazoncrawler.crawler;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,17 +10,23 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.Optional;
 
+
+/**
+ * Service for crawling DOMs from a url.
+ *
+ * @author sweis
+ */
 @Service
 public class WebCrawler {
 
-    final Logger LOG = LoggerFactory.getLogger(WebCrawler.class);
+    private final Logger LOG = LoggerFactory.getLogger(WebCrawler.class);
 
     /**
      * Returns the text from the given url and element name if present
      * otherwise null.
      *
-     * @param url the url
-     * @param elementName the elment name
+     * @param url         the url
+     * @param elementName the element name
      * @return the text if present, otherwise null
      */
     public String getElementTextFromDom(final String url, final String elementName) {

@@ -1,4 +1,4 @@
-package com.seis.amazoncrawler;
+package com.sweis.amazoncrawler;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
