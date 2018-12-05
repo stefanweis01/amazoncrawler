@@ -18,11 +18,10 @@ public class PriceService {
     public Optional<Double> crawlPriceForAsin(final String asin) {
         final String priceElement = webCrawler.getElementTextFromDom(AmazonUrlResolver.buildAmazonUrlFromAsin(asin), AmazonCrawlerConstants.PRICE_ELEMENT);
 
-        final String[] priceParts = priceElement.split(" ");
-
-        if (priceParts[1] != null) {
-            return Optional.of(Double.valueOf(priceParts[1]));
+        if (priceElement != null) {
+            return Optional.of(Double.valueOf(priceElement.replaceAll("[^\\d.,]","")));
         }
+
         return Optional.empty();
     }
 }
